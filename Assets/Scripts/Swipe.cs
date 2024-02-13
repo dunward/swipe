@@ -12,7 +12,13 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
     [SerializeField]
     private float swipeThreshold = 0.05f;
 
+    private RectTransform rectTransform;
     private SwipeType currentSwipeType = 0;
+
+    private void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -40,8 +46,8 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
             currentSwipeType = 0;
         }
 
-        GetComponent<RectTransform>().anchoredPosition = Vector3.Lerp(Vector3.zero, new Vector3(targetX, 0, 0), Mathf.Abs(calcX) * 20f);
-        GetComponent<RectTransform>().eulerAngles = Vector3.Lerp(Vector3.zero, new Vector3(0, 0, angleZ), Mathf.Abs(calcX) * 20f);
+        rectTransform.anchoredPosition = Vector3.Lerp(Vector3.zero, new Vector3(targetX, 0, 0), Mathf.Abs(calcX) * 20f);
+        rectTransform.eulerAngles = Vector3.Lerp(Vector3.zero, new Vector3(0, 0, angleZ), Mathf.Abs(calcX) * 20f);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -61,8 +67,8 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
                 break;
             default:
                 Debug.LogError("Nothing");
-                GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
-                GetComponent<RectTransform>().eulerAngles = Vector3.zero;
+                rectTransform.anchoredPosition = Vector3.zero;
+                rectTransform.eulerAngles = Vector3.zero;
                 break;
         }
 
@@ -77,8 +83,8 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             timer += Time.deltaTime * 5;
 
-            GetComponent<RectTransform>().anchoredPosition = Vector3.Lerp(new Vector3(startPosition, 0, 0), new Vector3(startPosition * 20, 0, 0), timer);
-            GetComponent<RectTransform>().eulerAngles = Vector3.Lerp(new Vector3(0, 0, startAngle), new Vector3(0, 0, startAngle * 5), timer);
+            rectTransform.anchoredPosition = Vector3.Lerp(new Vector3(startPosition, 0, 0), new Vector3(startPosition * 20, 0, 0), timer);
+            rectTransform.eulerAngles = Vector3.Lerp(new Vector3(0, 0, startAngle), new Vector3(0, 0, startAngle * 5), timer);
 
             yield return null;
         }
