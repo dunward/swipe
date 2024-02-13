@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 24610161}
   - component: {fileID: 24610162}
   m_Layer: 5
-  m_Name: LR Swipe Card
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 102272230}
   - component: {fileID: 102272231}
   m_Layer: 5
-  m_Name: LR Swipe Card (4)
+  m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 237472870}
   - component: {fileID: 237472871}
   m_Layer: 5
-  m_Name: LR Swipe Card (1)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 990817814}
   - component: {fileID: 990817815}
   m_Layer: 5
-  m_Name: LR Swipe Card (2)
+  m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 1094001705}
   - component: {fileID: 1094001706}
   m_Layer: 5
-  m_Name: LR Swipe Card (3)
+  m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
